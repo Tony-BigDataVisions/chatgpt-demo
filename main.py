@@ -5,7 +5,7 @@ gc.enable()
 warnings.filterwarnings('ignore')
 
 # Necessary
-openai.api_key = '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'
+openai.api_key = st.secrets['api_key']
 
 # Wrapper function for interacting with OpenAI API
 def ask_chatgpt(question, model="text-davinci-002"):
