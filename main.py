@@ -17,6 +17,8 @@ def ask_chatgpt(question, model="text-davinci-002"):
 st.set_page_config(layout="wide", page_icon="🧠", page_title="Conversing with AI - Powered by ChatGPT")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
+st.write(st.secrets)
+
 # Streamlit titles
 st.sidebar.title("Click a checkbox to generate questions to ask ChatGPT")
 
