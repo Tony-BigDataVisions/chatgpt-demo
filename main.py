@@ -18,6 +18,7 @@ st.set_page_config(layout="wide", page_icon="🧠", page_title="Conversing with 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 st.write(st.secrets)
+print(st.secrets)
 
 # Streamlit titles
 st.sidebar.title("Click a checkbox to generate questions to ask ChatGPT")
