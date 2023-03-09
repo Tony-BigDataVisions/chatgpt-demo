@@ -17,7 +17,7 @@ def ask_chatgpt(question, model="text-davinci-002"):
 st.set_page_config(layout="wide", page_icon="🧠", page_title="Conversing with AI - Powered by ChatGPT")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-st.write(st.secrets.pi_key)
+st.write(st.secrets.api_key)
 print(st.secrets.api_key)
 
 # Streamlit titles
