@@ -5,7 +5,7 @@ gc.enable()
 warnings.filterwarnings('ignore')
 
 # Necessary
-openai.api_key = st.secrets['api_key']
+openai.api_key = st.secrets.api_key
 
 # Wrapper function for interacting with OpenAI API
 def ask_chatgpt(question, model="text-davinci-002"):
@@ -17,8 +17,8 @@ def ask_chatgpt(question, model="text-davinci-002"):
 st.set_page_config(layout="wide", page_icon="🧠", page_title="Conversing with AI - Powered by ChatGPT")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
-st.write(st.secrets)
-print(st.secrets)
+st.write(st.secrets.api_key)
+print(st.secrets.api_key)
 
 # Streamlit titles
 st.sidebar.title("Click a checkbox to generate questions to ask ChatGPT")
