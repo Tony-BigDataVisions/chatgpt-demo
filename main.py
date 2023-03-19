@@ -22,18 +22,6 @@ st.set_option('deprecation.showPyplotGlobalUse', False)
 # Streamlit titles
 st.sidebar.title("Click a checkbox to generate questions to ask ChatGPT")
 
-# Try to remove the whitespace
-st.markdown("""
-        <style>
-               .block-container {
-                    padding-top: 1rem;
-                    padding-bottom: 0rem;
-                    padding-left: 5rem;
-                    padding-right: 5rem;
-                }
-        </style>
-        """, unsafe_allow_html=True)
-
 prompt = None
 selections = ['Pick a topic', 'Related to major news', 'Related to major US Sports', 'A random prompt', 'Enter in your own question']
 idx = selections.index('Pick a topic')
