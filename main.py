@@ -18,7 +18,7 @@ st.set_page_config(layout="wide", page_icon="🧠", page_title="Conversing with 
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
 # Include the BDV logo
-st.sidebar.image('Transparent-PNG.png', width=500)
+st.sidebar.image('Transparent-PNG.png', width=100)
 # Streamlit titles
 st.sidebar.title("Click a checkbox to generate questions to ask ChatGPT")
 
