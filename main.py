@@ -4,15 +4,8 @@ import openai, streamlit as st, random, warnings, gc as gc
 gc.enable()
 warnings.filterwarnings('ignore')
 
-def decrypt(s, start=100):    
-    new_str = []
-    for i in range(len(s)):
-        new_str.append(chr(int(ord(s[i]) / start)))
-        start += 1
-    return ''.join(new_str)
-
 # Necessary
-openai.api_key = decrypt(str("ⳬ⨷ᇮ‰⅐ⱌ⯤\u16fd⇀㎅⋎ᡈ☐ᖡ᠌】ㅤⶴⶢⴗ┈᧿ὴ⡜ᢴ›㔨ゞ㖀⍆▔㹮㌌\u1975㓞⋎㡐䀸⮪⩚\u1cfc䁱⼦✚㥠ἧᶨ◦⡸⢾㱚"))
+openai.api_key = st.secrets.api_key
 
 # Wrapper function for interacting with OpenAI API
 def ask_chatgpt(question, model="text-davinci-002"):
@@ -24,8 +17,22 @@ def ask_chatgpt(question, model="text-davinci-002"):
 st.set_page_config(layout="wide", page_icon="🧠", page_title="Conversing with AI - Powered by ChatGPT")
 st.set_option('deprecation.showPyplotGlobalUse', False)
 
+# Include the BDV logo
+st.image('Transparent-PNG.png', width=500)
 # Streamlit titles
 st.sidebar.title("Click a checkbox to generate questions to ask ChatGPT")
+
+# Try to remove the whitespace
+st.markdown("""
+        <style>
+               .block-container {
+                    padding-top: 1rem;
+                    padding-bottom: 0rem;
+                    padding-left: 5rem;
+                    padding-right: 5rem;
+                }
+        </style>
+        """, unsafe_allow_html=True)
 
 prompt = None
 selections = ['Pick a topic', 'Related to major news', 'Related to major US Sports', 'A random prompt', 'Enter in your own question']
